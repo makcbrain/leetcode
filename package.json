@@ -1,0 +1,13 @@
+{
+	"name": "leetcode",
+	"module": "index.ts",
+	"type": "module",
+	"scripts": {
+		"lint": "npx @biomejs/biome check --write"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "1.9.4",
+		"@types/bun": "latest",
+		"typescript": "5.7.3"
+	}
+}
