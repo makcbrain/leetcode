@@ -1,17 +1,48 @@
-class Node {
-	constructor(val, next, random) {
+export class Node {
+	constructor(val, next = null, random = null) {
 		this.val = val;
 		this.next = next;
 		this.random = random;
 	}
 }
 
-const copyNode = (node) => {
-	if (node === null) {
+export const copyRandomList = (head) => {
+	if (!head) {
 		return null;
 	}
 
-	return new Node(node.value, copyNode(node.next), copyNode(node.random));
-};
+	const nodes = new Map();
 
-const copyRandomList = (head) => copyNode(head);
+	const getNode = (currNode) => {
+		if (!currNode) {
+			return null;
+		}
+
+		const node = nodes.get(currNode);
+
+		if (node) {
+			return node;
+		}
+
+		const newNode = new Node(currNode.value);
+		nodes.set(currNode, newNode);
+
+		return newNode;
+	};
+
+	const linkNode = (currentNode) => {
+		const node = getNode(currentNode);
+
+		node.next = getNode(currentNode.next);
+		node.random = getNode(currentNode.random);
+	};
+
+	let node = head;
+
+	while (node) {
+		linkNode(node);
+		node = node.next;
+	}
+
+	return getNode(head);
+};

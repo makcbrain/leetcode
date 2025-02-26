@@ -3,7 +3,8 @@
 	"module": "index.ts",
 	"type": "module",
 	"scripts": {
-		"lint": "npx @biomejs/biome check --write"
+		"lint": "npx @biomejs/biome check --write",
+		"test": "bun test"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "1.9.4",
