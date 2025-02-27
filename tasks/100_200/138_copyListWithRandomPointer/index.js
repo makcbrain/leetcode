@@ -24,7 +24,7 @@ export const copyRandomList = (head) => {
 			return node;
 		}
 
-		const newNode = new Node(currNode.value);
+		const newNode = new Node(currNode.val);
 		nodes.set(currNode, newNode);
 
 		return newNode;
