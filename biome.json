@@ -23,7 +23,14 @@
 			"recommended": true,
 			"style": {
 				"useNumberNamespace": "off",
-				"noParameterAssign": "off"
+				"noParameterAssign": "off",
+				"useConst": {
+					"level": "error",
+					"fix": "none"
+				}
+			},
+			"suspicious": {
+				"noAssignInExpressions": "off"
 			}
 		}
 	},
