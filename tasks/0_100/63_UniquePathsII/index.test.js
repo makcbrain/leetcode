@@ -19,3 +19,11 @@ it('should return 1', () => {
 		]),
 	).toBe(1);
 });
+
+it('should return 1', () => {
+	expect(uniquePathsWithObstacles([[0]])).toBe(1);
+});
+
+it('should return 0', () => {
+	expect(uniquePathsWithObstacles([[1]])).toBe(0);
+});
