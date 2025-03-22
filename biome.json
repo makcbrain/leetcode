@@ -31,7 +31,11 @@
 				"noUselessElse": "off"
 			},
 			"suspicious": {
-				"noAssignInExpressions": "off"
+				"noAssignInExpressions": "off",
+				"noGlobalIsNan": "off"
+			},
+			"correctness": {
+				"noUnnecessaryContinue": "off"
 			}
 		}
 	},
