@@ -40,5 +40,3 @@ class TreeNode {
 		this.right = right === undefined ? null : right;
 	}
 }
-
-const a = !(!false && !true);
